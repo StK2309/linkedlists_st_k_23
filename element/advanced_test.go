@@ -1,9 +1,9 @@
-package elements
+package element
 
 import "fmt"
 
 func ExampleElement_Append() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(23)
@@ -24,7 +24,7 @@ func ExampleElement_Append() {
 }
 
 func ExampleElement_Length() {
-	e := NewEmpty()
+	e := Empty()
 
 	fmt.Println(e.Length())
 
@@ -41,7 +41,7 @@ func ExampleElement_Length() {
 }
 
 func ExampleElement_Contains() {
-	e := NewEmpty()
+	e := Empty()
 
 	fmt.Println(e.Contains(42))
 
@@ -62,7 +62,7 @@ func ExampleElement_Contains() {
 }
 
 func ExampleElement_Count() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(23)
@@ -82,7 +82,7 @@ func ExampleElement_Count() {
 }
 
 func ExampleElement_Sum() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(23)
@@ -95,7 +95,7 @@ func ExampleElement_Sum() {
 }
 
 func ExampleElement_Min() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(15)
@@ -108,7 +108,7 @@ func ExampleElement_Min() {
 }
 
 func ExampleElement_Last() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(15)
@@ -121,7 +121,7 @@ func ExampleElement_Last() {
 }
 
 func ExampleElement_At_existing() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(15)
@@ -138,7 +138,7 @@ func ExampleElement_At_existing() {
 }
 
 func ExampleElement_At_nonexisting() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.Append(42)
 	e.Append(15)
@@ -157,7 +157,7 @@ func ExampleElement_At_nonexisting() {
 }
 
 func ExampleElement_String() {
-	e := NewEmpty()
+	e := Empty()
 
 	fmt.Println(e)
 

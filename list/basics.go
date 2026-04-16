@@ -1,13 +1,13 @@
-package lists
+package list
 
 import (
 	"fmt"
-	"linkedlists/elements"
+	"linkedlists/element"
 )
 
-// New erstellt eine neue leere Liste.
-func New() *List {
-	return &List{head: elements.NewEmpty()}
+// Empty erstellt eine neue leere Liste.
+func Empty() *List {
+	return &List{head: element.Empty()}
 }
 
 // IsEmpty gibt an, ob die Liste leer ist.

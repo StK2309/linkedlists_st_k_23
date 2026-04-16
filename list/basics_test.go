@@ -1,11 +1,11 @@
-package lists
+package list
 
 import (
 	"fmt"
 )
 
-func ExampleNew() {
-	l := New()
+func ExampleEmpty() {
+	l := Empty()
 
 	fmt.Println(l.IsEmpty())
 	fmt.Println(l)
@@ -16,7 +16,7 @@ func ExampleNew() {
 }
 
 func ExampleList_Append() {
-	l := New()
+	l := Empty()
 
 	l.Append(42)
 	l.Append(23)
@@ -30,7 +30,7 @@ func ExampleList_Append() {
 }
 
 func ExampleList_Length() {
-	l := New()
+	l := Empty()
 
 	fmt.Println(l.Length())
 
@@ -47,7 +47,7 @@ func ExampleList_Length() {
 }
 
 func ExampleList_Contains() {
-	l := New()
+	l := Empty()
 
 	fmt.Println(l.Contains(42))
 

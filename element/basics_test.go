@@ -1,21 +1,23 @@
-package elements
+package element
 
 import "fmt"
 
 func ExampleElement_IsEmpty() {
-	e1 := NewEmpty()
-	e2 := NewWithValue(42)
+	e1 := Empty()
+	e2 := New(42)
 
 	fmt.Println(e1.IsEmpty())
 	fmt.Println(e2.IsEmpty())
+	fmt.Print(e2.Next().IsEmpty())
 
 	// Output:
 	// true
 	// false
+	// true
 }
 
 func ExampleElement_Value_nonempty() {
-	e := NewWithValue(42)
+	e := New(42)
 
 	fmt.Println(e.Value())
 
@@ -24,7 +26,7 @@ func ExampleElement_Value_nonempty() {
 }
 
 func ExampleElement_Value_empty() {
-	e := NewEmpty()
+	e := Empty()
 
 	defer func() {
 		if r := recover(); r != nil {
@@ -39,8 +41,8 @@ func ExampleElement_Value_empty() {
 }
 
 func ExampleElement_Next_nonempty() {
-	e1 := NewWithValue(42)
-	e1.next = NewWithValue(23)
+	e1 := New(42)
+	e1.next = New(23)
 
 	fmt.Println(e1.Next().value)
 	fmt.Println(e1.Next().IsEmpty())
@@ -51,7 +53,7 @@ func ExampleElement_Next_nonempty() {
 }
 
 func ExampleElement_SetValue() {
-	e := NewEmpty()
+	e := Empty()
 
 	e.SetValue(42)
 	fmt.Println(e.Value())

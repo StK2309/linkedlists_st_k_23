@@ -1,4 +1,4 @@
-package elements
+package element
 
 // IsEmpty gibt an, ob das Element leer ist.
 // Ein Element ist leer, wenn es kein Nachfolger-Element hat.
@@ -51,7 +51,7 @@ func (e *Element) SetValue(value int) {
 	// Ansonsten setze einfach den value auf den gegebenen Wert.
 	// begin:solution
 	if e.IsEmpty() {
-		e.next = NewEmpty()
+		e.next = Empty()
 	}
 	e.value = value
 	// end:solution
