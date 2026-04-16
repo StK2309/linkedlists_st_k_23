@@ -66,3 +66,31 @@ func ExampleList_Contains() {
 	// true
 	// true
 }
+
+func ExampleList_Swap() {
+	l := Empty()
+
+	l.Append(42)
+	l.Append(23)
+	l.Append(17)
+	l.Append(5)
+	l.Append(11)
+	l.Append(3)
+
+	fmt.Println(l)
+
+	l.Swap(0, 5)
+	fmt.Println(l)
+
+	l.Swap(1, 4)
+	fmt.Println(l)
+
+	l.Swap(2, 3)
+	fmt.Println(l)
+
+	// Output:
+	// [42 -> 23 -> 17 -> 5 -> 11 -> 3]
+	// [3 -> 23 -> 17 -> 5 -> 11 -> 42]
+	// [3 -> 11 -> 17 -> 5 -> 23 -> 42]
+	// [3 -> 11 -> 5 -> 17 -> 23 -> 42]
+}

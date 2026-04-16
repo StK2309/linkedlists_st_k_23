@@ -5,7 +5,7 @@ package element
 // D.h. wenn der Nachfolger-Pointer nil ist.
 func (e *Element) IsEmpty() bool {
 	// HINWEIS:
-	// Überprüfe, ob der next-Pointer nil ist.
+	// Überprüfen Sie, ob der next-Pointer nil ist.
 	// begin:solution
 	return e.next == nil
 	// end:solution
@@ -15,9 +15,9 @@ func (e *Element) IsEmpty() bool {
 // Für ein leeres Element wird eine panic ausgelöst.
 func (e *Element) Value() int {
 	// HINWEIS:
-	// Überprüfe, ob das Element leer ist (mit IsEmpty).
-	// Wenn ja, löse eine panic aus.
-	// Ansonsten gib den value zurück.
+	// Überprüfen Sie, ob das Element leer ist (mit IsEmpty).
+	// Wenn ja, lösen Sie eine panic aus.
+	// Ansonsten geben Sie den value zurück.
 	// begin:solution
 	if e.IsEmpty() {
 		panic("value for empty element requested")
@@ -30,9 +30,9 @@ func (e *Element) Value() int {
 // Für ein leeres Element wird eine panic ausgelöst.
 func (e *Element) Next() *Element {
 	// HINWEIS:
-	// Überprüfe, ob das Element leer ist (mit IsEmpty).
-	// Wenn ja, löse eine panic aus.
-	// Ansonsten gib den next-Pointer zurück.
+	// Überprüfen Sie, ob das Element leer ist (mit IsEmpty).
+	// Wenn ja, lösen Sie eine panic aus.
+	// Ansonsten geben Sie den next-Pointer zurück.
 	// begin:solution
 	if e.IsEmpty() {
 		panic("next element for empty element requested")
@@ -45,10 +45,10 @@ func (e *Element) Next() *Element {
 // Falls das Element bisher leer war, wird es mit dem gegebenen Wert initialisiert.
 func (e *Element) SetValue(value int) {
 	// HINWEIS:
-	// Wenn das Element leer ist, initialisiere es:
-	//   Erstelle ein neues leeres Element und weise es dem next-Pointer zu.
-	//   Setze den value auf den gegebenen Wert.
-	// Ansonsten setze einfach den value auf den gegebenen Wert.
+	// Wenn das Element leer ist, initialisieren Sie es:
+	//   Erstellen Sie ein neues leeres Element und weise es dem next-Pointer zu.
+	//   Setzen Sie den value auf den gegebenen Wert.
+	// Ansonsten setzen Sie einfach den value auf den gegebenen Wert.
 	// begin:solution
 	if e.IsEmpty() {
 		e.next = Empty()
