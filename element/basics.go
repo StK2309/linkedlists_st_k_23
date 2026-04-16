@@ -6,7 +6,9 @@ package element
 func (e *Element) IsEmpty() bool {
 	// HINWEIS:
 	// Überprüfen Sie, ob der next-Pointer nil ist.
-	return e.next == nil
+
+	// TODO
+	return false
 }
 
 // Value liefert den Wert des Elements.
