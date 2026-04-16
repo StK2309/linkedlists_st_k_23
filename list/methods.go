@@ -25,21 +25,26 @@ func (l *List) Append(value int) {
 	// HINWEIS:
 	// Delegieren Sie die Arbeit an das Kopf-Element der Liste.
 	// D.d. rufe die Append-Methode des Kopf-Elements auf.
-	l.head.Append(value)
+
+	// TODO
 }
 
 // Length gibt die Anzahl der Elemente in der Liste zurück.
 func (l *List) Length() int {
 	// HINWEIS:
 	// Delegieren Sie die Arbeit an das Kopf-Element der Liste.
-	return l.head.Length()
+
+	// TODO
+	return 0
 }
 
 // Contains gibt an, ob ein Element mit dem gegebenen Wert in der Liste enthalten ist.
 func (l *List) Contains(value int) bool {
 	// HINWEIS:
 	// Delegieren Sie die Arbeit an das Kopf-Element der Liste.
-	return l.head.Contains(value)
+
+	// TODO
+	return false
 }
 
 // Swap vertauscht die Elemente an den gegebenen Positionen in der Liste.
@@ -47,5 +52,6 @@ func (l *List) Swap(pos1, pos2 int) {
 	// HINWEIS:
 	// Delegieren Sie die Arbeit an das Kopf-Element der Liste.
 	// Aktualisieren Sie das Kopf-Element, falls das erste Element getauscht wird.
-	l.head = l.head.Swap(pos1, pos2)
+
+	// TODO
 }

@@ -16,10 +16,9 @@ func (e *Element) Value() int {
 	// Überprüfen Sie, ob das Element leer ist (mit IsEmpty).
 	// Wenn ja, lösen Sie eine panic aus.
 	// Ansonsten geben Sie den value zurück.
-	if e.IsEmpty() {
-		panic("value for empty element requested")
-	}
-	return e.value
+
+	// TODO
+	return 0
 }
 
 // Next liefert das Nachfolger-Element.
@@ -29,10 +28,9 @@ func (e *Element) Next() *Element {
 	// Überprüfen Sie, ob das Element leer ist (mit IsEmpty).
 	// Wenn ja, lösen Sie eine panic aus.
 	// Ansonsten geben Sie den next-Pointer zurück.
-	if e.IsEmpty() {
-		panic("next element for empty element requested")
-	}
-	return e.next
+
+	// TODO
+	return nil
 }
 
 // SetValue setzt den Wert des Elements.
@@ -43,8 +41,6 @@ func (e *Element) SetValue(value int) {
 	//   Erstellen Sie ein neues leeres Element und weise es dem next-Pointer zu.
 	//   Setzen Sie den value auf den gegebenen Wert.
 	// Ansonsten setzen Sie einfach den value auf den gegebenen Wert.
-	if e.IsEmpty() {
-		e.next = Empty()
-	}
-	e.value = value
+
+	// TODO
 }
