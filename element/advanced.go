@@ -2,12 +2,16 @@ package element
 
 // Append fügt ein neues Element mit dem gegebenen Wert am Ende der Liste ein.
 func (e *Element) Append(value int) {
-	// TODO
+	if e.IsEmpty() {
+		e.SetValue(value)
+	} else {
+		e.next.Append(value)
+	}
+	// e.Last().next.SetValue(value)
 }
 
 // Length gibt die Anzahl der Elemente in der Liste zurück.
 func (e *Element) Length() int {
-	// TODO
 	return 0
 }
 
@@ -39,15 +43,28 @@ func (e *Element) Min() int {
 // Last gibt das letzte Element der Liste zurück.
 // Falls die Liste leer ist, wird eine panic ausgelöst.
 func (e *Element) Last() *Element {
-	// TODO
-	return nil
+	if e.IsEmpty() {
+		panic("last for empty element requested")
+	}
+	if e.next.IsEmpty() {
+		return e
+	}
+	return e.next.Last()
 }
 
 // At gibt das Element an der gegebenen Position zurück.
 // Falls die Position nicht existiert, wird eine panic ausgelöst.
 func (e *Element) At(position int) *Element {
-	// TODO
-	return nil
+	if position < 0 {
+		panic("negative position requested")
+	}
+	if e.IsEmpty() {
+		panic("index out of bounds")
+	}
+	if position == 0 {
+		return e
+	}
+	return e.next.At(position - 1)
 }
 
 // String gibt eine textuelle Repräsentation der Liste zurück.
