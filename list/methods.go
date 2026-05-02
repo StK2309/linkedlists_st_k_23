@@ -22,22 +22,20 @@ func (l *List) String() string {
 
 // Append fügt ein neues Element mit dem gegebenen Wert am Ende der Liste ein.
 func (l *List) Append(value int) {
-	// TODO
+	l.head.Append(value)
 }
 
 // Length gibt die Anzahl der Elemente in der Liste zurück.
 func (l *List) Length() int {
-	// TODO
-	return 0
+	return l.head.Length()
 }
 
 // Contains gibt an, ob ein Element mit dem gegebenen Wert in der Liste enthalten ist.
 func (l *List) Contains(value int) bool {
-	// TODO
-	return false
+	return l.head.Contains(value)
 }
 
 // Swap vertauscht die Elemente an den gegebenen Positionen in der Liste.
 func (l *List) Swap(pos1, pos2 int) {
-	// TODO
+	l.head = l.head.Swap(pos1, pos2)
 }
